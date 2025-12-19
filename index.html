@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>CSUN Map Quiz</title>
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- jQuery Import -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- JS Script -->
+    <script defer src="script.js"></script>
+
+    <!-- Google Maps API Import -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap"
+      async
+      defer
+    ></script>
+  </head>
+
+  <body>
+    <div class="game">
+      <div class="panel oswald-regular">
+        <div id="mainPanel">
+          <h1>CSUN Map Quiz</h1>
+          <p class="hint">
+            Please <b>double click</b> on the map the location of:
+          </p>
+
+          <div class="current-question">
+            <div class="label">Current location:</div>
+            <div id="questionText" class="question">Loading…</div>
+          </div>
+
+          <div id="feedback" class="feedback">
+            Double-click the map to answer.
+          </div>
+
+          <div class="current-score">
+            <div>Progress: <span id="progress">0</span>/5</div>
+            <div>Correct: <span id="correctCount">0</span></div>
+            <div>Incorrect: <span id="incorrectCount">0</span></div>
+            <div>Timer: <span id="timer">0:00</span></div>
+          </div>
+
+          <hr />
+
+          <div class="log-title">Attempts</div>
+          <div id="log" class="log"></div>
+
+          <div class="actions">
+            <button id="restartButton" type="button">Restart</button>
+          </div>
+
+          <div id="finalBanner" class="final-banner hidden"></div>
+        </div>
+        <div id="scorePanel">
+          <h2>Latest Score</h2>
+        </div>
+      </div>
+
+      <main class="map-wrapper">
+        <div id="map" class="map"></div>
+      </main>
+    </div>
+  </body>
+</html>

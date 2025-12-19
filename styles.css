@@ -1,0 +1,174 @@
+:root {
+  --panel-bg: white;
+  --bar: #2f6f8f;
+  --bar-text: #0b1b22;
+  --correct: rgba(27, 94, 32, 0.35);
+  --wrong: rgba(183, 28, 28, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.oswald-regular {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.game {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 360px 1fr;
+}
+
+.panel {
+  background: var(--panel-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px 14px;
+  overflow: auto;
+}
+
+.panel h1 {
+  margin: 0 0 8px 0;
+  font-size: 28px;
+}
+
+.hint {
+  margin: 0 0 12px 0;
+  font-size: 16px;
+}
+
+.current-question {
+  background: var(--bar);
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.current-question .label {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 6px;
+}
+
+.current-question .question {
+  font-size: 16px;
+  font-weight: bold;
+  background: #7da7bb;
+  padding: 6px 8px;
+  color: var(--bar-text);
+}
+
+.feedback {
+  background: #7da7bb;
+  color: #0b1b22;
+  padding: 8px 10px;
+  margin-bottom: 12px;
+  min-height: 34px;
+  font-size: 14px;
+}
+
+.current-score {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.log-title {
+  font-weight: bold;
+  margin: 10px 0 6px;
+}
+
+.log {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.log-item {
+  background: #7da7bb;
+  padding: 6px 8px;
+  font-size: 13px;
+  color: #0b1b22;
+}
+
+.log-item .small-correct {
+  display: block;
+  color: var(--correct);
+  font-size: 12px;
+}
+
+.log-item .small-wrong {
+  display: block;
+  color: var(--wrong);
+  font-size: 12px;
+}
+
+.actions {
+  margin-top: 12px;
+}
+
+button {
+  padding: 10px 12px;
+  border: 0;
+  background: #1f4d62;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+button:hover {
+  filter: brightness(1.05);
+}
+
+.final-banner {
+  margin-top: 14px;
+  font-size: 44px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.hidden {
+  display: none;
+}
+
+.map-wrapper {
+  height: 100%;
+  background: #eee;
+}
+
+.map {
+  height: 100%;
+  width: 100%;
+}
+
+#scorePanel {
+  margin-top: 1rem;
+}
+
+.score-entry {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.score-value {
+  font-weight: bold;
+  color: #1f7a3a;
+}
+
+.score-details {
+  font-size: 0.9em;
+  color: #555;
+}
